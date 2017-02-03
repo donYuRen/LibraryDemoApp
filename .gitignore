@@ -1,0 +1,15 @@
+bin
+lib
+target
+.settings
+.classpath
+.project
+build.log
+
+hs_err_pid*
+*.contrib*
+
+com.btfin.log.dir_IS_UNDEFINED
+*.test
+*.iml
+.idea

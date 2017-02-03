@@ -1,0 +1,19 @@
+package com.donren.springboot;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+
+import com.donren.springboot.configuration.JpaConfiguration;
+
+@Configuration
+@ComponentScan({"com.donren.springboot.repositories","com.donren.springboot.model"})
+@EnableAutoConfiguration(exclude={JpaConfiguration.class})
+// same as @Configuration @EnableAutoConfiguration @ComponentScan
+public class AppTest{
+	public static void main(String[] args) {
+		SpringApplication.run(AppTest.class, args);
+	}
+}

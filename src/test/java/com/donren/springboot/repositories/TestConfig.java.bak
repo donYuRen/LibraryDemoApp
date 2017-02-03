@@ -1,0 +1,23 @@
+package com.donren.springboot.repositories;
+
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.test.context.ConfigFileApplicationContextInitializer;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.TestPropertySource;
+
+import com.donren.springboot.configuration.JpaConfiguration;
+
+@Configuration
+@Import(JpaConfiguration.class)
+@TestPropertySource(locations="classpath:application-test.yml")
+@ActiveProfiles("local")
+@ContextConfiguration(
+		initializers = {ConfigFileApplicationContextInitializer.class})
+@EnableAutoConfiguration
+public class TestConfig {
+
+}
+
